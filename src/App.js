@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { client } from './client';
 import Posts from './components/Posts';
+import Navbar from './components/Navbar';
 
 
 class App extends React.Component {
@@ -28,13 +29,7 @@ class App extends React.Component {
 						<div className='wrapper'>
 							<h1 className="devtechno">DEV.TECHNO</h1>
 						</div>
-						<div className='site-links'>
-							<a className='link-item' href="https://www.rainerb.ml">HOME</a>
-							<a className='link-item' href="https://www.rainerb.ml/#/about">ABOUT</a>
-							<a className='link-item' href="https://klvsmusic.bandcamp.com/">BANDCAMP</a>
-							<a className='link-item' href="https://www.obskurmusic.co/">OBSKUR MUSIC [LABEL]</a>
-							<span></span>
-						</div>
+						<Navbar />
 					</header>
 					<main>
 						<div className='post-container'>

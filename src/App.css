@@ -2,6 +2,74 @@
   margin: auto;
 }
 
+.menu-container {
+	position: relative;
+}
+
+.nav {
+	width: 30vw;
+	border-width: 0 1px 1px 0;
+	border-style: solid;
+	border-color: #888;
+	position: absolute;
+	top: 0;
+	z-index: 999;
+	background-color: #fff;
+	left: -35vw;
+	-webkit-transition: left 0.3s ease-in;
+	-o-transition: left 0.3s ease-in;
+	transition: left 0.3s ease-in;
+}
+
+
+.nav {
+  width: 50vw;
+  left: -55vw;
+}
+
+
+.close {
+	display: flex;
+	justify-content: flex-end;
+	padding: 0 15px 0 0;
+	font-size: 2rem;
+	font-weight: bold;
+	color: black;
+	cursor: pointer;
+}
+
+.nav.show {
+	left: 0;
+}
+
+.menu-button {
+	position: relative;
+	z-index: 99;
+	font-size: 30px;
+	cursor: pointer;
+  padding: 10px 8px;
+  color: black;
+}
+
+.menu-items {
+	padding: 0;
+	margin: 0;
+}
+
+.menu-list {
+	list-style: none;
+}
+
+.menu-link {
+	text-decoration: none;
+	color: black;
+	display: flex;
+	padding: 16px 10px;
+	font-size: 18px;
+	border-bottom: 1px solid black;
+}
+
+
 .App {
   font-family: "Source Code Pro", monospace;
 }
@@ -21,24 +89,6 @@
     text-shadow: 
               5px 6px maroon,
               10px 10px #000000;
-}
-
-.site-links {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 3fr 5fr;
-  width: 100%;
-  font-size: 18px;
-  text-decoration: none;
-  color: black;
-  padding-top: 20px;
-}
-
-.link-item {
-  border: 1px solid black;
-  padding: 5px;
-  box-shadow: 7px 3px black;
 }
 
 a:link {
@@ -85,7 +135,6 @@ a:hover {
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-template-columns: 1fr 3fr;
   column-gap: 20px;
   box-shadow: 20px 10px black;
   border: 1px solid black;
@@ -93,9 +142,27 @@ a:hover {
 
 article {
   width: 90%;
+  padding: 20px;
 }
 
 .featuredImage {
-  width: 100%;
-  padding: 10px;
+  width: 90%;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 670px) {
+
+  .content-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 20px;
+  }
+
+  .nav {
+    width: 30vw;
+    left: -55vw;
+  }
+
 }
